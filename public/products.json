@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    "itemName": "Cricket Bat",
+    "categoryName": "Cricket",
+    "description": "High-quality cricket bat with durable wood.",
+    "price": 120,
+    "rating": 4.8,
+    "customization": "Extra grip",
+    "processingTime": "2 days",
+    "stockStatus": 25
+  },
+  {
+    "id": 2,
+    "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    "itemName": "Football",
+    "categoryName": "Football",
+    "description": "Premium leather football for all-weather play.",
+    "price": 40,
+    "rating": 4.5,
+    "customization": "Team logo",
+    "processingTime": "3 days",
+    "stockStatus": 40
+  },
+  {
+    "id": 3,
+    "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    "itemName": "Basketball",
+    "categoryName": "Basketball",
+    "description": "Durable basketball with a strong grip.",
+    "price": 35,
+    "rating": 4.6,
+    "customization": "Player name engraving",
+    "processingTime": "4 days",
+    "stockStatus": 30
+  },
+  {
+    "id": 4,
+    "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    "itemName": "Tennis Racket",
+    "categoryName": "Tennis",
+    "description": "Lightweight racket for professional gameplay.",
+    "price": 100,
+    "rating": 4.7,
+    "customization": "Grip tape",
+    "processingTime": "1 day",
+    "stockStatus": 20
+  },
+  {
+    "id": 5,
+    "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    "itemName": "Badminton Shuttlecock",
+    "categoryName": "Badminton",
+    "description": "Feathered shuttlecock for high precision.",
+    "price": 10,
+    "rating": 4.3,
+    "customization": "Durability enhancement",
+    "processingTime": "1 day",
+    "stockStatus": 50
+  },
+  {
+    "id": 6,
+    "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    "itemName": "Cricket Gloves",
+    "categoryName": "Cricket",
+    "description": "Comfortable and durable cricket gloves.",
+    "price": 25,
+    "rating": 4.4,
+    "customization": "Palm cushioning",
+    "processingTime": "2 days",
+    "stockStatus": 15
+  },
+  {
+    "id": 7,
+    "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    "itemName": "Football Jersey",
+    "categoryName": "Football",
+    "description": "Customizable team jersey.",
+    "price": 30,
+    "rating": 4.6,
+    "customization": "Player name and number",
+    "processingTime": "3 days",
+    "stockStatus": 60
+  },
+  {
+    "id": 8,
+    "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    "itemName": "Basketball Hoop",
+    "categoryName": "Basketball",
+    "description": "Portable basketball hoop with adjustable height.",
+    "price": 200,
+    "rating": 4.9,
+    "customization": "Team logo",
+    "processingTime": "5 days",
+    "stockStatus": 10
+  },
+  {
+    "id": 9,
+    "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    "itemName": "Tennis Balls",
+    "categoryName": "Tennis",
+    "description": "Pack of 3 high-bounce tennis balls.",
+    "price": 15,
+    "rating": 4.2,
+    "customization": "Custom color",
+    "processingTime": "1 day",
+    "stockStatus": 100
+  },
+  {
+    "id": 10,
+    "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    "itemName": "Badminton Racket",
+    "categoryName": "Badminton",
+    "description": "Lightweight racket with strong tension.",
+    "price": 50,
+    "rating": 4.5,
+    "customization": "Grip color",
+    "processingTime": "1 day",
+    "stockStatus": 35
+  }
+]
