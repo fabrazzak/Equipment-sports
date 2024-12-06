@@ -3,7 +3,7 @@ import { AuthContext } from '../../../component/AuthProvider/AuthProvider';
 import Product from '../Products/product';
 
 const Categories = () => {
-    const { products} = useContext(AuthContext)
+    const { products , theme} = useContext(AuthContext)
     const [isAddData,setAddData]=useState(false)  
     const [activeBtn,setActiveBtn]=useState("all-product")
 
@@ -36,7 +36,7 @@ const Categories = () => {
     }
     return (
         <div className='pb-8 md:pb-16 container mx-auto '>
-            <h2 className='section-title text-center md:text-4xl text-2xl font-bold pb-6'>Categories</h2>
+            <h2 className={`section-title text-center md:text-4xl text-2xl font-bold pb-6   ${theme == "dark" ? "text-white" : "text-[#272a33]"}`}>Categories</h2>
             <div className='grid md:grid-cols-4 mt-10 gap-10  relative mx-4 '>
                 {/* categories  */}
                 <div className='flex md:flex-col flex-wrap md:gap-5 gap-2 sticky top-0' >

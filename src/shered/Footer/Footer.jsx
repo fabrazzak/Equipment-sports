@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../component/AuthProvider/AuthProvider';
 
 const Footer = () => {
+    const { products, theme } = useContext(AuthContext)
+    { `section-title text-center md:text-4xl text-2xl font-bold pb-6   ${theme == "dark" ? "text-white" : "text-[#272a33]"}` }
     return (
-        <div className='bg-[#272a33] '>
-            <footer className="footer  container mx-auto  text-white p-10">
+        <div className={` ${theme == "dark" ? "bg-[#272a33]" : "text-[#272a33] border-t-2"}`}>
+            <footer className={`footer  container mx-auto  ${theme == "dark" ? "text-white" : "text-[#272a33]"}  p-10`}>
                 <nav>
                     <h6 className="footer-title">Services</h6>
                     <a className="link link-hover">Branding</a>

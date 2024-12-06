@@ -20,7 +20,7 @@ import { Pagination } from 'swiper/modules';
 const ReviewSlider = () => {
     const [reviews,setReviews]=useState([]);
      useEffect(()=>{
-        fetch("/public/review.json")
+         fetch("http://localhost:5000/review")
         .then(res => res.json())
         .then(data => setReviews(data))
      },[])

@@ -47,15 +47,20 @@ const AddEquipment = () => {
             .then(data => {
                 console.log(data)
 
+                form.reset(); 
+
                 
-                data.insertedId ?
+                data.insertedId ? 
+                                
                     Swal.fire({
+                       
                         icon: 'success',
                         title: 'Product Added!',
                         text: 'Your product has been added successfully.',
                         confirmButtonText: 'OK',
                         
-                    })  :
+                    })
+                  :
                     Swal.fire({
                         icon: 'error',
                         title: 'Failed to Add Product',

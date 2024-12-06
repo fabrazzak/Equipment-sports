@@ -43,6 +43,7 @@ const MyEquipmentDetails = () => {
             .then((data) => {
                 console.log(data)
                 if (data.modifiedCount > 0) {
+                    form.reset();
                     Swal.fire({
                         icon: 'success',
                         title: 'Product Updated!',

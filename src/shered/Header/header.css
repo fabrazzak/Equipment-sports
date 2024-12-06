@@ -1,0 +1,33 @@
+/* Global styles */
+body {
+    background-color: #ffffff !important;
+    color: #000000;
+}
+
+body {
+    background-color: #121212 !important;
+    color: #ffffff;
+}
+
+
+
+/* button {
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+body.light button {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+body.dark button {
+    background-color: #ffffff;
+    color: #000000;
+} */

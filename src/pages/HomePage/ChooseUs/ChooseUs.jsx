@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import img from "../../../assets/choose-us.jpg"
 import { Slide } from "react-awesome-reveal";
 import { Fade } from "react-awesome-reveal";
+import { AuthContext } from '../../../component/AuthProvider/AuthProvider';
 
 
 
 
 const ChooseUs = () => {
+    const { products, theme } = useContext(AuthContext)
     return (
        
         <div className='container mx-auto md:w-10/12 py-10'>
@@ -16,7 +18,7 @@ const ChooseUs = () => {
                
            
 
-            <h2 className='section-title text-center md:text-4xl text-2xl font-bold pb-8'>Why Choose Us </h2>
+                <h2 className={`section-title text-center md:text-4xl text-2xl font-bold pb-6   ${theme == "dark" ? "text-white" : "text-[#272a33]"}`}>Why Choose Us </h2>
 
             <div className='md:pt-10 pt-6 grid md:grid-cols-2 gap-8'>
                 <div>

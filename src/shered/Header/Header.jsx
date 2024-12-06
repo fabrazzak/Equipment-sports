@@ -4,8 +4,10 @@ import { AuthContext } from '../../component/AuthProvider/AuthProvider';
 import 'react-tooltip/dist/react-tooltip.css';
 import { Tooltip } from 'react-tooltip';
 import { Tooltip as ReactTooltip } from 'react-tooltip'
+import { FaAffiliatetheme } from 'react-icons/fa';
+import { IoMdSunny } from 'react-icons/io';
 const Header = () => {
-    const { singOut, user, loading } = useContext(AuthContext)
+    const { singOut, user, loading, toggleTheme, theme } = useContext(AuthContext)
 
 
     const navigate = useNavigate()
@@ -27,13 +29,17 @@ const Header = () => {
             <li> <NavLink to="/">Home</NavLink>    </li>
             <li> <NavLink to="/all-sports">All Sports Equipment</NavLink>  </li>
             <li>  <NavLink to="/add-equipment">Add Equipment</NavLink> </li>
-            <li> <NavLink to="/my-equipment-list">My Equipment List</NavLink>   </li >           
-            
+            <li> <NavLink to="/my-equipment-list">My Equipment List</NavLink>   </li >
+
 
         </>
+
+
+
+
     return (
-        <div className='bg-[#272a33]   '>
-            <div className="navbar container  mx-auto lg:text-white">
+        <div className={` ${theme == "dark" ? "bg-[#272a33]" : "bg-white"}   `}>
+            <div className={`navbar container  mx-auto lg:text-white ${theme == "dark" ? "text-white" : "text-black"} `}>
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-white">
@@ -57,17 +63,18 @@ const Header = () => {
 
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">Equipment Sports</a>
+                    <a className={`btn btn-ghost text-xl  ${theme == "dark" ? "text-white" : "text-[#272a33]"}`}>Equipment Sports</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 font-bold gap-6 text-white">
+                    <ul className={`menu menu-horizontal px-1 font-bold gap-6 ${theme == "dark" ? "text-white" : "text-[#272a33]"} `}>
 
                         {itemList}
 
                     </ul>
                 </div>
-                <div className="navbar-end ">
-                    {user ? <li className='flex' onClick={logOutHandle}><a href="#" data-tooltip-id="my-tooltip" data-tooltip-content={user.displayName} className='  flex gap-4 content-center item-center justify-center' > <img className='w-10 h-10 rounded-full ' src={user?.photoURL} alt="" referrerPolicy="no-referrer" /> <span className='mt-2 font-bold'>Log out</span></a></li> : <ul className='flex gap-6 font-bold'><li><NavLink to='/login'>Login</NavLink></li> <li> <NavLink to="/register">Register</NavLink></li ></ul>}
+                <div className="navbar-end  flex gap-6">
+                    {user ? <li className='flex' onClick={logOutHandle}><a href="#" data-tooltip-id="my-tooltip" data-tooltip-content={user.displayName} className='flex gap-4 content-center item-center justify-center ' > <img className='w-10 h-10 rounded-full ' src={user?.photoURL} alt="" referrerPolicy="no-referrer" /> <span className='mt-2 font-bold'>Log out</span></a></li> : <ul className='flex gap-6 font-bold'><li className={` ${theme == "dark" ? "text-white" : "text-[#272a33]"}`}><NavLink to='/login'>Login</NavLink></li> <li className={` ${theme == "dark" ? "text-white" : "text-[#272a33]"}`}> <NavLink to="/register">Register</NavLink></li ></ul>}
+                    <li className='flex' > <button className={`btn btn-outline  ${theme == "dark" ? "text-white" : "text-[#272a33]"} flex gap-3 content-center items-center`} onClick={toggleTheme}>  {theme == "dark" ? <>Dark < FaAffiliatetheme /></> : <>Light < IoMdSunny /></>}</button></li>
                 </div>
             </div>
             <Tooltip id="my-tooltip" className='z-10' />

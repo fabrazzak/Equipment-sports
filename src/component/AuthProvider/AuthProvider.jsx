@@ -13,7 +13,7 @@ const AuthProvider = ({children}) => {
     // product data 
 
     useEffect(()=>{
-        fetch("/products.json")
+        fetch("http://localhost:5000/products")
         .then(res => res.json())
         .then(data => setProducts(data))
     },[])
@@ -86,8 +86,19 @@ const AuthProvider = ({children}) => {
 
 
     }, [])
+
+    const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
+
+    useEffect(() => {
+        localStorage.setItem("theme", theme);
+        document.body.className = theme; // Apply the theme to the body element
+    }, [theme]);
+
+    const toggleTheme = () => {
+        setTheme(theme === "light" ? "dark" : "light");
+    };
     
-    const info = { products, setProducts,   createUser, loginUser, loginWithGoogle, user, singOut, loading, updatePass, profileUpdate }
+    const info = { products, setProducts, toggleTheme, theme,  createUser, loginUser, loginWithGoogle, user, singOut, loading, updatePass, profileUpdate }
 
     return (
         <AuthContext.Provider value={info}>
