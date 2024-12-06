@@ -32,7 +32,7 @@ const MyEquipmentDetails = () => {
         }
 
         // Make the PUT request using fetch
-        fetch(`http://localhost:5000/my-product/${id}`, {
+        fetch(`https://equi-sports-server-eight.vercel.app/my-product/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

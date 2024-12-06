@@ -1,6 +1,6 @@
 # EquiSports: Sports Equipment Online Store
 
-## Live Site URL 
+## Live Site URL  https://equi-sports-6a027.web.app/
 
 
 ## Features

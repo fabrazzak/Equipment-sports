@@ -28,7 +28,7 @@ const SingleCard = ({ product, setProducts, products }) => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/my-products/${id}`, {
+                fetch(`https://equi-sports-server-eight.vercel.app/my-products/${id}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json'

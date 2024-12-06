@@ -27,7 +27,7 @@ const router = createBrowserRouter([
             ,{
                 path: "/all-sports",
                 element: <AllSportsEquipment></AllSportsEquipment>,
-                loader: () =>  fetch('http://localhost:5000/products')
+                loader: () =>  fetch('https://equi-sports-server-eight.vercel.app/products')
             } ,{
                 path: "/all-sports/:id",
                 element: <EquipmentViewDetails></EquipmentViewDetails>,               

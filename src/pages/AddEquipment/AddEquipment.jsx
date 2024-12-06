@@ -36,7 +36,7 @@ const AddEquipment = () => {
         }
 
         // Make the POST request using fetch
-        fetch('http://localhost:5000/create-product', {
+        fetch('https://equi-sports-server-eight.vercel.app/create-product', {
             method: 'POST', // HTTP method
             headers: {
                 'Content-Type': 'application/json', // Send JSON data

@@ -20,7 +20,7 @@ import { Pagination } from 'swiper/modules';
 const ReviewSlider = () => {
     const [reviews,setReviews]=useState([]);
      useEffect(()=>{
-         fetch("http://localhost:5000/review")
+         fetch("https://equi-sports-server-eight.vercel.app/review")
         .then(res => res.json())
         .then(data => setReviews(data))
      },[])

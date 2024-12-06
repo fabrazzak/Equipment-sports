@@ -15,7 +15,7 @@ const MyEquipment = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/my-product/${userEmail}`)
+        fetch(`https://equi-sports-server-eight.vercel.app/my-product/${userEmail}`)
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [products]) 

@@ -13,7 +13,7 @@ const EquipmentViewDetails = () => {
 
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/products/${id}`)
+        fetch(`https://equi-sports-server-eight.vercel.app/products/${id}`)
         .then(res =>res.json())
         .then(data => setProduct(data))
     },[])
