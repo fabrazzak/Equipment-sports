@@ -8,10 +8,10 @@ const firebaseConfig = {
     projectId: "equi-sports-6a027",
     storageBucket: "equi-sports-6a027.firebasestorage.app",
     messagingSenderId: "671349157711",
-    appId: "1:671349157711:web:fe62f61b854ba74fa5df3a"
+    appId: "1:671349157711:web:fe62f61b854ba74fa5df3a",
 };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-export default auth;
+export default auth
