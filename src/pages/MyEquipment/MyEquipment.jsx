@@ -18,10 +18,10 @@ const MyEquipment = () => {
         fetch(`http://localhost:5000/my-product/${userEmail}`)
             .then(res => res.json())
             .then(data => setProducts(data))
-    }, []) 
+    }, [products]) 
 
    
-    console.log(products, `http://localhost:5000/my-product/${userEmail}`)
+   
 
 
     return (
@@ -33,7 +33,7 @@ const MyEquipment = () => {
                         <h2 className='section-title text-center md:text-4xl text-2xl font-bold pb-10 mb-10 '>My Equipment </h2>
                    <div className='grid md:grid-cols-3 gap-6'>
                             {
-                                products.map((product, index) => <SingleCard product={product} key={index}></SingleCard>)
+                                products.map((product, index) => <SingleCard products={products} setProducts={setProducts} product={product} key={index}></SingleCard>)
                             }
                    </div>
                     </div>

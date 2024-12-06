@@ -4,10 +4,56 @@ import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography'
 import { Link } from 'react-router';
-
-const SingleCard = ({ product }) => {
+import Swal from 'sweetalert2'
+const SingleCard = ({ product, setProducts, products }) => {
     const { categoryName, customization, description, image, itemName, price,processingTime, rating, stockStatus, _id } = product;
     console.log(product)
+
+
+
+
+
+    const handleDelete =(id)=>{
+            console.log(id)
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+
+                fetch(`http://localhost:5000/my-products/${id}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                }).then(res => res.json())
+                    .then(data => {
+                        if (data.success) {
+                            setProducts([...products.includes(!product)])
+                           
+                        } 
+                    })
+                    .catch(error => {
+                        console.error('Error during deletion:', error);
+                    });
+
+
+                Swal.fire({
+                    title: "Deleted!",
+                    text: "Your file has been deleted.",
+                    icon: "success"
+                });
+            }
+        });
+
+    }
 
     return (
         <div>
