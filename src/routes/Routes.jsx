@@ -12,6 +12,7 @@ import Register from '../pages/Register/Register';
 import ForgetPassword from '../pages/ForgetPassword/ForgetPassword';
 import FourOFour from '../pages/FourOFour/FourOFour';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import EquipmentViewDetails from '../pages/EquipmentViewDetails/EquipmentViewDetails';
 
 const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
             ,{
                 path: "/all-sports",
                 element: <AllSportsEquipment></AllSportsEquipment>,
+                loader: () =>  fetch('http://localhost:5000/products')
+            } ,{
+                path: "/all-sports/:id",
+                element: <EquipmentViewDetails></EquipmentViewDetails>,               
             }
             ,{
                 path: "/add-equipment",
