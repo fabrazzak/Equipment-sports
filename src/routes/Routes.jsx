@@ -9,6 +9,8 @@ import AddEquipment from '../pages/AddEquipment/AddEquipment';
 import MyEquipment from '../pages/MyEquipment/MyEquipment';
 import Login from '../pages/Login/Login';
 import Register from '../pages/Register/Register';
+import ForgetPassword from '../pages/ForgetPassword/ForgetPassword';
+import FourOFour from '../pages/FourOFour/FourOFour';
 
 const router = createBrowserRouter([
     {
@@ -38,6 +40,12 @@ const router = createBrowserRouter([
             ,{
                 path: "/register",
                 element:<Register></Register>,
+            },{
+                path: "/forget",
+                element:<ForgetPassword></ForgetPassword>,
+            },{
+                path: "*",
+                element:<FourOFour></FourOFour>,
             },
         ],
     },
