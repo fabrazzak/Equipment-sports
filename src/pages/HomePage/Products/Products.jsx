@@ -1,9 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../../component/AuthProvider/AuthProvider';
 import Product from './product';
 
 const Products = () => {
-    const {products , theme } = useContext(AuthContext)
+    const {theme}=useContext(AuthContext)
+    const [products,setProducts]=useState([])
+    useEffect(() => {
+        fetch("https://equi-sports-server-eight.vercel.app/product-six")
+            .then(res => res.json())
+            .then(data => setProducts(data))
+    }, [])
     console.log(products)
     return (
         <div className='flex flex-col justify-center md:my-16 my-6 container mx-auto'>
