@@ -11,6 +11,7 @@ import Login from '../pages/Login/Login';
 import Register from '../pages/Register/Register';
 import ForgetPassword from '../pages/ForgetPassword/ForgetPassword';
 import FourOFour from '../pages/FourOFour/FourOFour';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
     {
@@ -26,12 +27,12 @@ const router = createBrowserRouter([
                 element: <AllSportsEquipment></AllSportsEquipment>,
             }
             ,{
-                path: "/all-add-equipment",
-                element: <AddEquipment></AddEquipment>,
+                path: "/add-equipment",
+                element: <PrivateRoute> <AddEquipment></AddEquipment></PrivateRoute>,
             }
             ,{
                 path: "/my-equipment-list",
-                element: <MyEquipment></MyEquipment>,
+                element: <PrivateRoute><MyEquipment></MyEquipment></PrivateRoute>,
             }
             ,{
                 path: "/login",

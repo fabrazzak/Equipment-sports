@@ -21,7 +21,7 @@ import slider4 from '../../../assets/slider-4.webp'
 
 const Slider = () => {
     return (
-        <div className='text-black'>
+        <div className='text-black z-0'>
            
                 <Swiper
                     spaceBetween={30}

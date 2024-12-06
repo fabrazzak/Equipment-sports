@@ -1,17 +1,34 @@
-import React from 'react';
-import { NavLink } from 'react-router';
-
+import React, { useContext } from 'react';
+import { NavLink, useNavigate } from 'react-router';
+import { AuthContext } from '../../component/AuthProvider/AuthProvider';
+import 'react-tooltip/dist/react-tooltip.css';
+import { Tooltip } from 'react-tooltip';
+import { Tooltip as ReactTooltip } from 'react-tooltip'
 const Header = () => {
+    const { singOut, user, loading } = useContext(AuthContext)
+
+
+    const navigate = useNavigate()
+
+    const logOutHandle = () => {
+        singOut()
+            .then(() => {
+                // Sign-out successful.\
+                navigate("/login")
+            }).catch((error) => {
+                // An error happened.
+            });
+
+    }
 
     const itemList =
         <>
 
             <li> <NavLink to="/">Home</NavLink>    </li>
-            <li> <NavLink to="/all-sports">All Sports</NavLink>  </li>
-            <li>  <NavLink to="/all-add-equipment">All Add Equipment</NavLink> </li>
-            <li> <NavLink to="/my-equipment-list">My Equipment List</NavLink>   </li >
-            <li> <NavLink to="/login">Login</NavLink>    </li >
-            <li> <NavLink to="/register">Register</NavLink></li >
+            <li> <NavLink to="/all-sports">All Sports Equipment</NavLink>  </li>
+            <li>  <NavLink to="/add-equipment">Add Equipment</NavLink> </li>
+            <li> <NavLink to="/my-equipment-list">My Equipment List</NavLink>   </li >           
+            
 
         </>
     return (
@@ -49,10 +66,11 @@ const Header = () => {
 
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <a className="btn">Logout</a>
+                <div className="navbar-end ">
+                    {user ? <li className='flex' onClick={logOutHandle}><a href="#" data-tooltip-id="my-tooltip" data-tooltip-content={user.displayName} className='  flex gap-4 content-center item-center justify-center' > <img className='w-10 h-10 rounded-full ' src={user?.photoURL} alt="" referrerPolicy="no-referrer" /> <span className='mt-2 font-bold'>Log out</span></a></li> : <ul className='flex gap-6 font-bold'><li><NavLink to='/login'>Login</NavLink></li> <li> <NavLink to="/register">Register</NavLink></li ></ul>}
                 </div>
             </div>
+            <Tooltip id="my-tooltip" className='z-10' />
 
         </div>
     );
