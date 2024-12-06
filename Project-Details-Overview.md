@@ -1,7 +1,7 @@
 # EquiSports: Sports Equipment Online Store
 
-## Live Site URL
-[EquiSports Live](#)
+## Live Site URL 
+
 
 ## Features
 
@@ -26,38 +26,13 @@
 - MongoDB instance running
 - Firebase account for authentication
 
-### Steps
-1. Clone the repositories:
-   - [Client-side](#)
-   - [Server-side](#)
 
-2. Install dependencies:
-   ```bash
-   cd client
-   npm install
 
-   cd ../server
-   npm install
-   ```
-
-3. Set up environment variables:
+### Set up environment variables:
    - **Client-side:** Create a `.env` file and add Firebase configuration keys.
    - **Server-side:** Create a `.env` file and add MongoDB connection string.
 
-4. Run the development servers:
-   - **Client:**
-     ```bash
-     npm run start
-     ```
-   - **Server:**
-     ```bash
-     npm run dev
-     ```
 
-5. Open the client app in your browser:
-   ```
-   http://localhost:3000
-   ```
 
 ## Commit Logs
 
@@ -90,15 +65,7 @@
 
 ## Deployment
 
-- **Client:** Hosted on Netlify with Firebase authorization
+- **Client:** Hosted on firebase with Firebase authorization
 - **Server:** Hosted on Vercel
 
-## Contact
-For inquiries or support, contact:
-- Email: [support@equisports.com](mailto:support@equisports.com)
-- Phone: +1-800-SPORTS
 
-Follow us on social media:
-- Facebook: [EquiSports](#)
-- Twitter: [@EquiSports](#)
-- Instagram: [@EquiSports](#)
