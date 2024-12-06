@@ -1,4 +1,5 @@
 import React from 'react';
+import img from "../../../assets/choose-us.jpg"
 
 const ChooseUs = () => {
     return (
@@ -8,7 +9,7 @@ const ChooseUs = () => {
 
             <div className='md:pt-10 pt-6 grid md:grid-cols-2 gap-8'>
                 <div>
-                    <img className='rounded-3xl' src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="" />
+                    <img className='rounded-3xl object-fit w-full' src={img} alt="" />
                 </div>
                 <div>                    
 

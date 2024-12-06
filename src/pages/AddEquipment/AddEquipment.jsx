@@ -19,14 +19,14 @@ const AddEquipment = () => {
         const product = {
             userName: user?.displayName,
             userEmail:user?.email,
-            name: form.name.value,
-            category: form.category.value,
+            itemName: form.name.value,
+            categoryName: form.category.value,
             description: form.description.value,
             price: form.price.value,
             rating: form.rating.value,
             customization: form.customization.value,
-            processing: form.processing.value,
-            stock: form.stock.value,
+            processingTime: form.processing.value,
+            stockStatus: form.stock.value,
             image: form.image.value,
 
         };
@@ -54,6 +54,7 @@ const AddEquipment = () => {
                         title: 'Product Added!',
                         text: 'Your product has been added successfully.',
                         confirmButtonText: 'OK',
+                        
                     })  :
                     Swal.fire({
                         icon: 'error',
@@ -85,16 +86,22 @@ const AddEquipment = () => {
                                 <label className="label">
                                     <span className="label-text">User Name</span>
                                 </label>
-                                <input type="text" value={user?.displayName} disabled readOnly name="name" placeholder="User Name" className="input input-bordered" required />
+                                <input type="text" value={user?.displayName} disabled readOnly name="user-name" placeholder="User Name" className="input input-bordered" required />
                             </div>
                             
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">User Email</span>
                                 </label>
-                                <input type="email" name="name" value={user?.email} readOnly disabled placeholder="User Email" className="input input-bordered" required />
+                                <input type="email" name="user-email" value={user?.email} readOnly disabled placeholder="User Email" className="input input-bordered" required />
                             </div>
 
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Product Name</span>
+                                </label>
+                                <input type="text" name="name" placeholder="Product Name" className="input input-bordered" required />
+                            </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Category Name</span>
@@ -145,16 +152,16 @@ const AddEquipment = () => {
                                 </label>
                                 <input type="text" name="stock" placeholder="Processing Time" className="input input-bordered" required />
                             </div>
-                            <div className="form-control  ">
-                                <label className="label">
-                                    <span className="label-text">Product Image</span>
-                                </label>
-                                <input type="text" name="image" placeholder="Product Image" className="input input-bordered" required />
-                            </div>
+                          
 
 
                             <div className='col-span-2'>
-                                
+                                <div className="form-control  ">
+                                    <label className="label">
+                                        <span className="label-text">Product Image Url</span>
+                                    </label>
+                                    <input type="text" name="image" placeholder="Product Image Url" className="input input-bordered" required />
+                                </div>                                
 
                                 <div className="form-control mt-6 bg-[]">
                                     <button className="btn font-bold text-lg border-0 border-b-4    border-[#272a33] hover:border-[#146c43]   text-white bg-[#146c43] hover:bg-[#272a33] ">Product Add </button>

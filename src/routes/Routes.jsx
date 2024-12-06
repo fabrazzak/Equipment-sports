@@ -13,6 +13,7 @@ import ForgetPassword from '../pages/ForgetPassword/ForgetPassword';
 import FourOFour from '../pages/FourOFour/FourOFour';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import EquipmentViewDetails from '../pages/EquipmentViewDetails/EquipmentViewDetails';
+import MyEquipmentDetails from '../pages/MyEquipmentDetails/MyEquipmentDetails';
 
 const router = createBrowserRouter([
     {
@@ -38,6 +39,9 @@ const router = createBrowserRouter([
             ,{
                 path: "/my-equipment-list",
                 element: <PrivateRoute><MyEquipment></MyEquipment></PrivateRoute>,
+            },{
+                path: "/my-equipment-list/:id",
+                element: <PrivateRoute><MyEquipmentDetails></MyEquipmentDetails></PrivateRoute>,
             }
             ,{
                 path: "/login",

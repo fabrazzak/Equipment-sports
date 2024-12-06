@@ -3,11 +3,12 @@ import React from 'react';
 const Product = ({ product }) => {
     return (
         <div>
-            <div className="card bg-base-100  shadow-xl">
+            <div className="card bg-base-100  shadow-xl p-5">
                 <figure>
-                    <img
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                    <img className='w-52 h-52  object-cover'
+                        src={product?.image}
                         alt="Shoes" />
+                    
                 </figure>
                 <div className="card-body gap-4">
                     <h2 className="card-title">

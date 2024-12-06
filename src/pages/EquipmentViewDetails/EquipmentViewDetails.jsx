@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 
+import Box from '@mui/material/Box';
+import Rating from '@mui/material/Rating';
+import Typography from '@mui/material/Typography';
+
+
+
 const EquipmentViewDetails = () => {
     const {id}=useParams()
     const [product,setProduct]=useState([])
@@ -12,39 +18,38 @@ const EquipmentViewDetails = () => {
         .then(data => setProduct(data))
     },[])
 
-    const { category, customization, description, image, name, price, proccesing, rating, stock, _id } = product;
+    const { categoryName, customization, description, image, itemName, price, processingTime, rating, stockStatus, _id } = product;
     console.log(product)
 
 
     return (
         <div>
             
-            <div className="hero bg-base-200 min-h-screen">
+            <div className="hero bg-base-200 min-h-screen ">
                 <div className="hero-content text-center">
                     <div className="">
                         <h2 className='section-title text-center md:text-4xl text-2xl font-bold pb-10 mb-10 '>Equipment Details</h2>
-                        <div className="card bg-base-100 w-96 shadow-xl">
+                        <div className="card bg-base-100 md:w-96 shadow-xl py-6">
                             <figure>
                                 <img
                                     src={image}
                                     alt="product" />
                             </figure>
-                            <div className="card-body">
-                                <h2 className="card-title">
+                            <div className=" flex flex-col text-left px-10 gap-5 mb-6">
+                                <h2 className="font-bold text-2xl">
                                    
-                                    {name}
+                                   Item Name: {itemName}
                                 </h2>
-                                <p>{price}</p>
-                                <p>{category}</p>
-                                <p>{category}</p>
-                                <p>{customization}</p>
-                                <p>{rating}</p>
-                                <p>{stock}</p>
-                                <p>{description}</p>
-                                <div className="card-actions justify-end">
-                                    <div className="badge badge-outline">Fashion</div>
-                                    <div className="badge badge-outline">Products</div>
-                                </div>
+                                <p className='font-bold'>Price: {price} $</p>
+                                <p className='font-bold'>Category: {categoryName}</p>
+                                <p className='font-bold'> Processing Time: {processingTime}</p>
+                                <p className='font-bold'> Customization: {customization}</p>  
+                                {rating && <Rating name="read-only" value={rating} readOnly />}                             
+                                <p className='font-bold'>Stock:  {stockStatus} </p>
+                                <p className=''><span className='font-bold'>Description: </span>  {description}</p>
+                               
+                               
+                                
                             </div>
                         </div>
                     </div>
