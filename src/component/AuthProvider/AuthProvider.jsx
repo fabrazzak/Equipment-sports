@@ -38,7 +38,7 @@ const AuthProvider = ({children}) => {
         const provider = new GoogleAuthProvider();
         return signInWithPopup(auth, provider)
 
-    }
+    } 
 
 
 
