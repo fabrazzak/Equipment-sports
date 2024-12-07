@@ -3,6 +3,7 @@ import { useParams } from 'react-router';
 
 import { AuthContext } from '../../component/AuthProvider/AuthProvider';
 import SingleCard from './singleCard';
+import { Helmet } from 'react-helmet-async';
 
 
 const MyEquipment = () => {
@@ -26,6 +27,10 @@ const MyEquipment = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>My Equipment | Equipment Sports </title>
+
+            </Helmet> 
 
             <div className="hero bg-base-200  py-10">
                 <div className="hero-content text-center">

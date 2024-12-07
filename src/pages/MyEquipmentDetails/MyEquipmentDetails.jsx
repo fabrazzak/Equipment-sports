@@ -3,6 +3,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../component/AuthProvider/AuthProvider';
 import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const MyEquipmentDetails = () => {
     const { user } = useContext(AuthContext);
@@ -67,6 +68,10 @@ const MyEquipmentDetails = () => {
 
     return (
         <div className="min-h-screen mx-6 md:w-6/12 md:mx-auto">
+            <Helmet>
+                <title>Update Equipment | Equipment Sports </title>
+
+            </Helmet> 
             <h2 className="text-center text-2xl md:text-4xl font-bold py-10">Update Equipment</h2>
 
             <div className="card bg-base-100 shadow-2xl">

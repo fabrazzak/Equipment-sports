@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import Swal from 'sweetalert2'
 import { AuthContext } from '../../component/AuthProvider/AuthProvider';
+import { Helmet } from 'react-helmet-async';
 
 
 // or via CommonJS
@@ -22,7 +23,7 @@ const AddEquipment = () => {
             itemName: form.name.value,
             categoryName: form.category.value,
             description: form.description.value,
-            price: form.price.value,
+            price: parseInt(form.price.value),
             rating: form.rating.value,
             customization: form.customization.value,
             processingTime: form.processing.value,
@@ -82,11 +83,15 @@ const AddEquipment = () => {
 
 
             <div className=" md:w-6/12 md:mx-auto  mx-6  content-center  min-h-screen">
+                <Helmet>
+                    <title>Add Equipment | Equipment Sports </title>
+
+                </Helmet> 
                 <div className=" flex-col ">
                     <h2 className='section-title text-center md:text-4xl text-2xl font-bold py-10'>Categories</h2>
 
-                    <div className="card bg-base-100     shrink-0 shadow-2xl">
-                        <form onSubmit={handleOnsubmit} className="card-body grid grid-cols-2 gap-6">
+                    <div className="card bg-base-100     shrink-0 shadow-2xl mt-6">
+                        <form onSubmit={handleOnsubmit} className="card-body grid md:grid-cols-2 grid-cols-1 md:gap-6 ">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">User Name</span>
@@ -160,7 +165,7 @@ const AddEquipment = () => {
                           
 
 
-                            <div className='col-span-2'>
+                            <div className='md:col-span-2'>
                                 <div className="form-control  ">
                                     <label className="label">
                                         <span className="label-text">Product Image Url</span>

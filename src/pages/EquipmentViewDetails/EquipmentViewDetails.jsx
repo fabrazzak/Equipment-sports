@@ -4,6 +4,7 @@ import { useParams } from 'react-router';
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -26,6 +27,10 @@ const EquipmentViewDetails = () => {
         <div>
             
             <div className="hero bg-base-200 min-h-screen ">
+                <Helmet>
+                    <title>Veiw Details | Equipment Sports </title>
+
+                </Helmet> 
                 <div className="hero-content text-center">
                     <div className="">
                         <h2 className='section-title text-center md:text-4xl text-2xl font-bold pb-10 mb-10 '>Equipment Details</h2>

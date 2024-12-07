@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Product = ({ product }) => {
     return (
@@ -18,8 +19,9 @@ const Product = ({ product }) => {
                     <h4 className='text-lg font-semibold'>Product Price : {product.price}</h4>
 
                     <div className="card-actions ">
+                        <Link to={`all-sports/${product._id}`}>
                         <div className=" btn btn-primary border-0 border-b-4  hover:border-b-0 border-[#272a33] text-white bg-[#146c43] hover:bg-[#146c43] ">View Details</div>
-
+                        </Link>
                     </div>
                 </div>
             </div>
