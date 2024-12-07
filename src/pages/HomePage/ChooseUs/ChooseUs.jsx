@@ -3,6 +3,8 @@ import img from "../../../assets/choose-us.jpg"
 import { Slide } from "react-awesome-reveal";
 import { Fade } from "react-awesome-reveal";
 import { AuthContext } from '../../../component/AuthProvider/AuthProvider';
+import Lottie from "lottie-react";
+import groovyWalkAnimation from "../../../assets/choose.json";
 
 
 
@@ -21,8 +23,8 @@ const ChooseUs = () => {
                 <h2 className={`section-title text-center md:text-4xl text-2xl font-bold pb-6   ${theme == "dark" ? "text-white" : "text-[#272a33]"}`}>Why Choose Us </h2>
 
             <div className='md:pt-10 pt-6 grid md:grid-cols-2 gap-8'>
-                <div>
-                    <img className='rounded-3xl object-fit w-full' src={img} alt="" />
+                <div className='bg-white rounded-lg shadow-xl'>                    
+                        <Lottie className='object-cover h-96' animationData={groovyWalkAnimation} />;
                 </div>
                 <div>                    
 
