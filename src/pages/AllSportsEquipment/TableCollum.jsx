@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const TableCollum = ({ product, index }) => {
-    const { category, customization, description, image, name, price, proccesing, rating, stock, _id } = product
+    const { categoryName,  image, name, price,  _id } = product
     return (
         
             <tr>
@@ -21,7 +21,7 @@ const TableCollum = ({ product, index }) => {
                         </div>
                     </div>
                 </td>
-                <td><h3 className='font-bold'>{category}</h3></td>
+                <td><h3 className='font-bold'>{categoryName}</h3></td>
                 <td><h3 className='font-bold'>{price}</h3></td>
             <td > <Link to={`${_id}`}><button className='font-bold btn text-white hover:bg-[#146c43] bg-[#146c43]'>View Details</button></Link></td>
 

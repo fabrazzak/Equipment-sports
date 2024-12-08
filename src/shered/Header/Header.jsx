@@ -42,7 +42,7 @@ const Header = () => {
             <div className={`navbar container  mx-auto lg:text-white ${theme == "dark" ? "text-white" : "text-black"} `}>
                 <div className="navbar-start flex flex-col md:flex-row ">
                     <div className="dropdown">
-                        <div tabIndex={0} role="button" className={`btn btn-ghost lg:hidden${theme == "dark" ? "text-white" : "text-black"}`}>
+                        <div tabIndex={0} role="button" className={`btn btn-ghost lg:hidden ${theme == "dark" ? "text-white" : "text-black"}`}>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="h-5 w-5"
@@ -73,7 +73,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end  flex gap-6 flex-col md:flex-row">
-                    {user ? <li className='flex' onClick={logOutHandle}><a href="#" data-tooltip-id="my-tooltip" data-tooltip-content={user.displayName} className='flex gap-4 content-center item-center justify-center ' > <img className='w-10 h-10 rounded-full ' src={user?.photoURL} alt="" referrerPolicy="no-referrer" /> <span className='mt-2 font-bold'>Log out</span></a></li> : <ul className='flex gap-6 font-bold'><li className={` ${theme == "dark" ? "text-white" : "text-[#272a33]"}`}><NavLink to='/login'>Login</NavLink></li> <li className={` ${theme == "dark" ? "text-white" : "text-[#272a33]"}`}> <NavLink to="/register">Register</NavLink></li ></ul>}
+                    {user ? <li className={`flex ${theme == 'dark'?"text-white":"text-black"}`} onClick={logOutHandle}><a href="#" data-tooltip-id="my-tooltip" data-tooltip-content={user.displayName} className='flex gap-4 content-center item-center justify-center ' > <img className='w-10 h-10 rounded-full ' src={user?.photoURL} alt="" referrerPolicy="no-referrer" /> <span className={`mt-2 font-bold`}>Log out</span></a></li> : <ul className='flex gap-6 font-bold'><li className={` ${theme == "dark" ? "text-white" : "text-[#272a33]"}`}><NavLink to='/login'>Login</NavLink></li> <li className={` ${theme == "dark" ? "text-white" : "text-[#272a33]"}`}> <NavLink to="/register">Register</NavLink></li ></ul>}
                     <li className='flex' > <button className={`btn btn-outline  ${theme == "dark" ? "text-white" : "text-[#272a33]"} flex gap-3 content-center items-center`} onClick={toggleTheme}>  {theme == "dark" ? <>Dark < FaAffiliatetheme /></> : <>Light < IoMdSunny /></>}</button></li>
                 </div>
             </div>
