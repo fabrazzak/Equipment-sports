@@ -9,15 +9,15 @@ const AllSportsEquipment = () => {
     console.log(products)
 
 
-    const handleSortByPrice=()=>{
-      
+    const handleSortByPrice=(value)=>{
+        console.log(value)
 
-        fetch(' https://equi-sports-server-eight.vercel.app/products?sort=true')
+
+        fetch(` https://equi-sports-server-eight.vercel.app/products?sort=${value}`)
         .then(res => res.json())
         .then(data => setProducts(data))                
 
     }
-
    
    
 
@@ -32,6 +32,12 @@ const AllSportsEquipment = () => {
             
                 <div className='py-6'>
                 <button onClick={handleSortByPrice} className='btn btn-outline text-right float-end  '>Sort By Price</button>  
+                 <select  className="select select-success w-full max-w-xs" 
+                   onChange={(e) => handleSortByPrice(e.target.value === 'asc')}  >
+                <option disabled selected> Sort By Price </option>
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </select>
                 
                 </div>        
 

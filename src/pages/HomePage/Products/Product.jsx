@@ -4,9 +4,9 @@ import { Link } from 'react-router';
 const Product = ({ product }) => {
     return (
         <div>
-            <div className="card bg-base-100  shadow-xl p-5">
+            <div className="card bg-base-100 h-96  shadow-xl p-5">
                 <figure>
-                    <img className='w-52 h-52  object-cover'
+                    <img className=' h-full  object-cover'
                         src={product?.image}
                         alt="Shoes" />
                     

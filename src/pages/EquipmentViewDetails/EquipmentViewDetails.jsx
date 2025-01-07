@@ -1,16 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
 import { Helmet } from 'react-helmet-async';
+import { AuthContext } from '../../component/AuthProvider/AuthProvider';
+import Loading from '../../component/AuthProvider/Loading/Loading';
 
 
 
 const EquipmentViewDetails = () => {
     const {id}=useParams()
     const [product,setProduct]=useState([])
+    const {theme,loader}=useContext(AuthContext)
+
 
 
     useEffect(()=>{
@@ -22,7 +26,9 @@ const EquipmentViewDetails = () => {
     const { categoryName, customization, description, image, itemName, price, processingTime, rating, stockStatus, _id } = product;
     console.log(product)
 
-
+    if(loader){
+        return <Loading></Loading>
+    }
     return (
         <div>
             
@@ -34,9 +40,9 @@ const EquipmentViewDetails = () => {
                 <div className="hero-content text-center">
                     <div className="">
                         <h2 className='section-title text-center md:text-4xl text-2xl font-bold pb-10 mb-10 '>Equipment Details</h2>
-                        <div className="card bg-base-100 md:w-96 shadow-xl py-6">
+                        <div className="card bg-base-100  shadow-xl">
                             <figure>
-                                <img
+                                <img className=' h-96 w-full object-cover'
                                     src={image}
                                     alt="product" />
                             </figure>

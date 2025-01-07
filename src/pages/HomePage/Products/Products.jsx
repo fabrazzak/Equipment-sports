@@ -17,7 +17,7 @@ const Products = () => {
 
             <h2 className={`section-title text-center md:text-4xl text-2xl font-bold pb-6   ${theme == "dark" ? "text-white" : "text-[#272a33]"}`}>Trending Sports Accessories</h2>
 
-            <div className='md:pt-16 pt-8 grid md:grid-cols-3 gap-7'>
+            <div className='md:pt-16 pt-8 grid md:grid-cols-3 lg:grid-cols-4 gap-7'>
               {
                     products.map((product ,index)=><Product product={product} key={index}></Product>)
               }
